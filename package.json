@@ -15,7 +15,7 @@
     "highlight.js": "^11.7.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
-    "vue-stacked-ui": "file:../vue-stacked-ui"
+    "vue-stacked-ui": "^0.0.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
