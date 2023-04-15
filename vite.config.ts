@@ -9,7 +9,7 @@ import hljs from "highlight.js";
 export default defineConfig({
   plugins: [
     vue({
-      include: [/\.vue$/, /\.md$/], // <--
+      include: [/\.vue$/, /\.md$/],
     }),
     Markdown({
       markdownItOptions: {
