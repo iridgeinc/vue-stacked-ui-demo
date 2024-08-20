@@ -1,3 +1,4 @@
+import { defineComponent } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
@@ -7,10 +8,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: { stackable: true }
     },
     {
-      path: '/sample/:v1?/:v2?/:v3?/\/:slug(.*)?',
+      path: '/sample/:v1?/:v2?/:v3?/',
       name: 'sample',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -18,8 +20,14 @@ const router = createRouter({
       component: () => import('../views/SampleView.vue'),
       props: true,
       meta: { stackable: true }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotFound.vue')
     }
   ]
 })
+
 
 export default router
