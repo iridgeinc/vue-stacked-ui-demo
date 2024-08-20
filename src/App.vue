@@ -12,7 +12,7 @@
   </header>
 
   <section id="main">
-    <RouterView />
+    <StackRootView />
     <!-- Reserve Drawer Area  -->
     <div id="drawer_wrapper">
       <StackView />
